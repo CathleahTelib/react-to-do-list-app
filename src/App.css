@@ -23,7 +23,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
   color: white;
-  background: linear-gradient(to bottom right, #3a1f5c, #5a2a8b, #ff6f61, #f87c6c); 
+  background: linear-gradient(to bottom right, #5E1B89, #962071, #d84234, #F4512C ); 
   padding: 10px 0;
   border-radius: 8px;
 }
@@ -186,6 +186,8 @@ input[type="checkbox"]:checked::before {
   z-index: 1000; 
 }
 
+
+
 .modal-content {
   background-color: white;
   padding: 30px; 
@@ -202,7 +204,10 @@ input[type="checkbox"]:checked::before {
 
 
 .modal-content h2 {
-  color: #5e2929;
+  color: #3D2A6A;
+  text-decoration: underline;
+  text-decoration-color: #FF7043;
+  
 }
 
 
