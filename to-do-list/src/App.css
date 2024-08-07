@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Slab:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #f0f0f0;
+}
+
+.app {
+  max-width: 1170px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  background: linear-gradient(to bottom right, #3a1f5c, #5a2a8b, #ff6f61, #f87c6c); 
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], input[type="time"] {
+  padding: 10px;
+  border: 2px solid #800080;
+  border-radius: 4px;
+  color: #4B0082; 
+  font-size: 16px; 
+  outline: none;
+}
+
+.create-button {
+  background-color: #FF7043;
+  color: white;
+  font-size: 16px; 
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: #FF5722; 
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #6A1B9A; 
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4A148C; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-box {
+  background-color: white;
+  padding: 9px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+  z-index: 1; 
+}
+
+.done {
+  background-color: #d3d3d3; 
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+input[type="checkbox"] {
+  width: 20px; 
+  height: 20px; 
+  accent-color: #FF7043;
+  appearance: none;
+  position: relative;
+}
+
+input[type="checkbox"]::before {
+  content: ''; 
+  width: 100%;
+  height: 100%;
+  border: 2px solid #FF7043; 
+  border-radius: 4px; 
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '✔';
+  color: #4B0082; 
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-details {
+  display: flex;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.todo-text, .date-created, .deadline {
+  display: flex;
+  align-items: center;
+  text-align: left; 
+  padding: 5px;
+  flex: 1;
+}
+
+.todo-text {
+  color: #4B0082; 
+  text-decoration: none; 
+}
+
+.done .todo-text {
+  text-decoration: line-through; 
+}
+
+.date-created, .deadline {
+  font-size: 0.9em;
+  color: #4B0082; 
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+.no-tasks {
+  text-align: center;
+  color: #837e7e; 
+  margin-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px; 
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1001; 
+  max-width: 400px; 
+  width: 80%;
+  height: 50%;
+}
+
+
+.modal-content h2 {
+  color: #5e2929;
+}
+
+
+.edit-save-button, .edit-cancel-button {
+  background-color: #6A1B9A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.edit-cancel-button {
+  background-color: #4A148C; 
+}
+
+.edit-save-button:hover, .edit-cancel-button:hover {
+  background-color: #3D2A6A;
+}
+
+/* Custom styles for confirm-alert */
+.react-confirm-alert-body {
+  font-family: "Roboto Slab", serif;
+  color: #4B0082; 
+}
+
+.react-confirm-alert {
+  border: 2px solid #4B0082; 
+  border-radius: 8px; 
+}
+
+.react-confirm-alert-button-group {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px;
+}
+
+.react-confirm-alert-button-group button {
+  background-color: #FF7043;
+  color: white;
+  border: 2px solid #4B0082;
+}
+
+.react-confirm-alert-button-group button:hover {
+  background-color: #FF5722; 
+}
